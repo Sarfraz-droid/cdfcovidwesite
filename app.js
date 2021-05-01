@@ -33,8 +33,12 @@ app.get("/", function(req, res) {
 
 app.get("/:id", function(req, res) {
 
-    if (req.params.id == "needhelp") {
+    if (req.params.id === "needhelp") {
         res.render('needhelp');
+    } else if (req.params.id === "projectbreathe") {
+        res.render('projectbreathe', {
+            heading: "Project Breathe"
+        });
     } else {
         let value;
         console.log(_.lowerCase(req.params.id));
@@ -72,16 +76,38 @@ app.post("/needhelp", function(req, res) {
         if (error) {
             console.log(error);
         } else {
-            res.render('messagesent');
+            res.render('messagesent', {
+                message: "Message Sent"
+            });
             console.log('Email sent: ' + info.response);
         }
     });
 });
 
-app.get("/test/in", function(req, res) {
-    res.render('messagesent');
-});
 
-app.listen(process.env.PORT, function() {
+app.post("/projectbreathe", function(req, res) {
+    let subject = "Project Breathe";
+    let message = req.body.name + "\n" + req.body.email + "\n" + req.body.contact + "\n" + req.body.city;
+    var mailOptions = {
+        from: 'covidmail4@gmail.com',
+        to: 'alamsarfraz422@gmail.com',
+        subject: subject,
+        text: message
+    };
+
+    transporter.sendMail(mailOptions, function(error, info) {
+        if (error) {
+            console.log(error);
+        } else {
+            res.render('messagesent', {
+                message: "Form Filled"
+            });
+            console.log('Email sent: ' + info.response);
+        }
+    });
+
+})
+
+app.listen(process.env.PORT || 3000, function() {
     console.log("Server started on port 3000");
 });

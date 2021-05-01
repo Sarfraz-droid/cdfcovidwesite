@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 
@@ -140,10 +141,86 @@ label {
     .nav-logo {
         width: 14%;
     }
+    .pb-btn-donate {
+        margin: 0%;
+        margin-right: 7%;
+    }
+    .pb-info {
+        margin-top: 2%;
+    }
 }
 
 .heading {
     text-align: center;
     margin: 1% 0%;
     font-family: 'Montserrat', sans-serif;
+}
+
+.ss-slide {
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+    margin-bottom: 20%;
+    margin-top: 10%;
+}
+
+.ss-img {
+    width: 100%;
+    border-radius: 50px;
+}
+
+.ss-slide-inner {
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.082);
+    border-radius: 50px;
+}
+
+.pb-info {
+    margin-top: 5%;
+}
+
+.pb-text {
+    padding: 5%;
+    font-size: 1.5rem;
+    margin-right: 7%;
+}
+
+.pb-banner {
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.082);
+    border-radius: 50px;
+    margin: 2% 14%;
+    width: 70%;
+}
+
+.pb-btn-donate {
+    padding: 2%;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    font-weight: 400;
+    background-color: #fa5956;
+    border-color: #fa5956;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.034);
+}
+
+.pb-btn-donate:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #fa5956;
+}
+
+.pb-bank-details {
+    margin-top: 10%;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.pb-donateus {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.pb-contactus {}
+
+.pb-contact {
+    margin-top: 5%;
+    font-size: 1.5rem;
 }
