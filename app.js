@@ -90,7 +90,7 @@ app.post("/projectbreathe", function(req, res) {
     let message = req.body.name + "\n" + req.body.email + "\n" + req.body.contact + "\n" + req.body.city;
     var mailOptions = {
         from: 'covidmail4@gmail.com',
-        to: 'alamsarfraz422@gmail.com',
+        to: 'umamakhursheed@gmail.com',
         subject: subject,
         text: message
     };
